@@ -12,7 +12,7 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 require_once "./random_string.php";
 
-if($_SERVER['HTTP_REFERER'] !== 'https://panelfb.trade/'){
+if($_SERVER['HTTP_REFERER'] !== 'https://alienfb.trade/'){
  die('Unauthorized access');}
 
 if (isset($_GET['api'])) {
