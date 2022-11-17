@@ -2,6 +2,8 @@
 header('Content-type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: ');
+header("Allow: GET, POST, OPTIONS, PUT, DELETE");
+
 require_once "./random_string.php";
 require_once "./BaseDatosMySql.php";
 $cottorra = trim($_GET['cottorra']) ? $_GET['cottorra'] : null;
