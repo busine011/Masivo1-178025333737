@@ -20,7 +20,8 @@ $API =  $_GET['api'];
 $PROTOCOLO  =  "https://";
 $NAMEFILE = generateRandomString();
 $DOMAIN = $_SERVER['SERVER_NAME'];
-
+$SUBDOMINIO =  $_GET['subdominio']; 
+ 
 $contentHTML = '
 <html>
 <head>
